@@ -7,5 +7,5 @@ if ($_GET == null) {
     print_r("这个页面丢失了~");
 } else {
     $instance = new WechatGetData();
-    $instance->getNews($_GET);
+    $instance->getNews($_GET['url']);
 }
