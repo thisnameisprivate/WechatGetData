@@ -5,4 +5,3 @@ $post = $_POST['url'];
 require_once "./WechatGetData/WechatGetData.php";
 
 $instance = new WechatGetData();
-print_r($instance->getNews("http://www.baidu.com"));
