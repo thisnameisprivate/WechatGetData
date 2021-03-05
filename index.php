@@ -7,5 +7,6 @@ if ($_GET == null) {
     print_r("这个页面丢失了~");
 } else {
     $instance = new WechatGetData();
-    $instance->getNews($_GET['url']);
+    // 返回当前下载的文件名并调用后台下载相应的文件到本地
+    return $time = $instance->getNews($_GET['url']);
 }
