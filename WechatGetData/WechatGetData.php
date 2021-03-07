@@ -26,6 +26,6 @@ class WechatGetData {
         $myFile = fopen("news/". $time . ".html", "w") or die ("Unable to open file!");
         fwrite($myFile, $res);
         fclose($myFile);
-        return $time;
+        return json_encode($time);
     }
 }

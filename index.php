@@ -1,5 +1,6 @@
 <?php
 
+header("Content-Type: application/x-www-form-urlencoded");
 // 加载获取页面类
 require_once "./WechatGetData/WechatGetData.php";
 
@@ -8,5 +9,6 @@ if ($_GET == null) {
 } else {
     $instance = new WechatGetData();
     // 返回当前下载的文件名并调用后台下载相应的文件到本地
-    return $time = $instance->getNews($_GET['url']);
+    $time = $instance->getNews($_GET['url']);
+    print_r($time);
 }
